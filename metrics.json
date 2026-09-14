@@ -1,0 +1,87 @@
+{
+  "threshold": 0.55,
+  "top_countries": [
+    "PRT",
+    "GBR",
+    "FRA",
+    "ESP",
+    "DEU",
+    "ITA",
+    "IRL",
+    "BEL",
+    "BRA",
+    "NLD"
+  ],
+  "num_features": [
+    "lead_time",
+    "arrival_date_week_number",
+    "arrival_date_day_of_month",
+    "stays_in_weekend_nights",
+    "stays_in_week_nights",
+    "adults",
+    "children",
+    "babies",
+    "is_repeated_guest",
+    "previous_cancellations",
+    "previous_bookings_not_canceled",
+    "booking_changes",
+    "days_in_waiting_list",
+    "adr",
+    "required_car_parking_spaces",
+    "total_of_special_requests"
+  ],
+  "cat_features": [
+    "hotel",
+    "arrival_date_month",
+    "meal",
+    "country",
+    "market_segment",
+    "distribution_channel",
+    "reserved_room_type",
+    "deposit_type",
+    "customer_type"
+  ],
+  "deployment_metrics": {
+    "accuracy": 0.8053,
+    "precision": 0.6188,
+    "recall": 0.763,
+    "f1": 0.6833,
+    "roc_auc": 0.8802
+  },
+  "comparison": [
+    {
+      "Model": "Random Forest",
+      "Accuracy": 0.8409,
+      "Precision": 0.7645,
+      "Recall": 0.6099,
+      "F1": 0.6785,
+      "ROC-AUC": 0.8963
+    },
+    {
+      "Model": "Random Forest (balanced)",
+      "Accuracy": 0.838,
+      "Precision": 0.6913,
+      "Recall": 0.7436,
+      "F1": 0.7165,
+      "ROC-AUC": 0.8997
+    },
+    {
+      "Model": "RF balanced + threshold 0.45",
+      "Accuracy": 0.8283,
+      "Precision": 0.654,
+      "Recall": 0.7986,
+      "F1": 0.7191,
+      "ROC-AUC": 0.8997
+    },
+    {
+      "Model": "Logistic Regression",
+      "Accuracy": 0.791,
+      "Precision": 0.675,
+      "Recall": 0.4643,
+      "F1": 0.5502,
+      "ROC-AUC": 0.8269
+    }
+  ],
+  "train_rows": 69763,
+  "test_rows": 17441
+}
